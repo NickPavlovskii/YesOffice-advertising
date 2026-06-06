@@ -1,6 +1,7 @@
 import { BenefitsSection } from '@/components/sections/BenefitsSection'
 import { ClientsSection } from '@/components/sections/ClientsSection'
 import { HeroSection } from '@/components/sections/HeroSection'
+import { PlatformFeaturesSection } from '@/components/sections/PlatformFeaturesSection'
 import { ProblemsSection } from '@/components/sections/ProblemsSection'
 
 export function HomePage() {
@@ -10,6 +11,7 @@ export function HomePage() {
       <ProblemsSection />
       <BenefitsSection />
       <ClientsSection />
+      <PlatformFeaturesSection />
     </>
   )
 }
