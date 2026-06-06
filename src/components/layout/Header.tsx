@@ -4,7 +4,7 @@ import { cn } from '@/utils/cn'
 
 export function Header() {
   return (
-    <header className="relative z-20 border-b border-white/5 bg-[#050a14]/80 backdrop-blur-md">
+    <header className="relative z-20 animate-enter animate-fade-in-down border-b border-white/5 bg-[#050a14]/80 backdrop-blur-md motion-reduce:animate-none motion-reduce:opacity-100">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-6 py-4">
         <a href="#" className="transition-opacity hover:opacity-90">
           <Logo />

@@ -8,7 +8,7 @@ import {
   uiRegistry,
   type UiComponentName,
   type UiComponentsMap,
-} from '@/components/ui'
+} from '@/constants/ui'
 
 const UiContext = createContext<UiComponentsMap | null>(null)
 
