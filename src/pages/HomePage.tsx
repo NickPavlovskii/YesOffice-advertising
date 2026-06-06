@@ -3,6 +3,7 @@ import { ClientsSection } from '@/components/sections/ClientsSection'
 import { HeroSection } from '@/components/sections/HeroSection'
 import { PlatformFeaturesSection } from '@/components/sections/PlatformFeaturesSection'
 import { ProblemsSection } from '@/components/sections/ProblemsSection'
+import { WhyUsSection } from '@/components/sections/WhyUsSection'
 
 export function HomePage() {
   return (
@@ -12,6 +13,7 @@ export function HomePage() {
       <BenefitsSection />
       <ClientsSection />
       <PlatformFeaturesSection />
+      <WhyUsSection />
     </>
   )
 }
