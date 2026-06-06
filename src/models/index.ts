@@ -14,3 +14,11 @@ export type {
   PlatformFeatureItem,
   PlatformFeaturesSectionInfo,
 } from './platformFeature'
+export type {
+  AdvantageCardProps,
+  AdvantageIcon,
+  AdvantageItem,
+  ComparisonRow,
+  ComparisonTableProps,
+  WhyUsSectionInfo,
+} from './whyUs'
