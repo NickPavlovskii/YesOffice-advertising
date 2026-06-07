@@ -1,73 +1,70 @@
-# React + TypeScript + Vite
+# YesOffice — лендинг стартапа
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Одностраничный сайт платформы **YesOffice** для управления коммерческой недвижимостью: аналитика, автоматизация и контроль в реальном времени на базе Big Data.
 
-Currently, two official plugins are available:
+## Стек
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **React 19** + **TypeScript**
+- **Vite 8**
+- **Tailwind CSS 4**
+- **EmailJS** — отправка заявок на демо
 
-## React Compiler
+## Быстрый старт
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Сайт откроется на [http://localhost:5173](http://localhost:5173).
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Скрипты
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+| Команда           | Описание                    |
+| ----------------- | --------------------------- |
+| `npm run dev`     | Локальная разработка        |
+| `npm run build`   | Сборка в `dist/`            |
+| `npm run preview` | Просмотр production-сборки  |
+| `npm run lint`    | Проверка ESLint             |
+
+## Переменные окружения
+
 ```
+
+При отправке формы уходят два письма: уведомление администратору и автоответ пользователю.
+
+## Структура проекта
+
+```
+src/
+├── components/
+│   ├── layout/       # Header, Footer, Layout
+│   ├── sections/     # Секции лендинга
+│   └── ui/           # Переиспользуемые компоненты
+├── constants/        # Тексты, данные, навигация
+├── hooks/            # useInView, useCountUp
+├── models/           # TypeScript-типы
+├── pages/            # HomePage
+├── services/         # sendDemoEmail (EmailJS)
+└── utils/            # Вспомогательные функции
+```
+
+## Секции лендинга
+
+| Якорь                 | Секция              |
+| --------------------- | ------------------- |
+| `#problems`           | Проблемы рынка      |
+| `#benefits`           | Преимущества        |
+| `#clients`            | Клиенты и география |
+| `#platform-features`  | Возможности платформы |
+| `#why-us`             | Почему мы           |
+| `#competitors`        | Сравнение с конкурентами |
+| `#team`               | Команда             |
+| `#demo`               | Форма заявки на демо |
+| `#careers`            | Блок вакансий       |
+
+Кнопки «Получить демо», «Узнать больше» и «Заявка» в шапке ведут на `#demo`.
+
+## Лицензия
+
+Проект является частной разработкой YesOffice.
