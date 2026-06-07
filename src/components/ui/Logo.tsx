@@ -28,7 +28,7 @@ export function Logo({ className, showText = true }: LogoProps) {
       </svg>
       {showText && (
         <span className="text-lg font-semibold tracking-tight text-white">
-          W-Space
+          YesOffice
         </span>
       )}
     </span>

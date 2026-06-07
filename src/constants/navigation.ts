@@ -1,8 +1,9 @@
+import { anchors } from '@/constants/anchors'
 import type { NavItem } from '@/types'
 
 export const headerNav: NavItem[] = [
-  { label: 'Продукты', href: '#products' },
-  { label: 'Решения', href: '#solutions' },
-  { label: 'Цены', href: '#pricing' },
-  { label: 'О нас', href: '#about' },
+  { label: 'Продукты', href: anchors.platformFeatures },
+  { label: 'Решения', href: anchors.whyUs },
+  { label: 'Цены', href: anchors.demo },
+  { label: 'О нас', href: anchors.team },
 ]

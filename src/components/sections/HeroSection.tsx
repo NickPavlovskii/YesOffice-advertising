@@ -1,7 +1,13 @@
 import type { PropsWithChildren } from 'react'
 import { Logo, ScrollMouseIcon } from '@/components/ui'
+import { anchors } from '@/constants/anchors'
 import { heroStats } from '@/constants/hero'
 import { cn } from '@/utils/cn'
+
+const ctaLinkClass = cn(
+  'inline-flex items-center gap-2 rounded-lg px-6 py-3 text-sm font-medium transition-colors',
+  'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-[#050a14]',
+)
 
 function ChartIcon() {
   return (
@@ -76,31 +82,28 @@ export function HeroSection() {
 
         <FadeIn delay={360}>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-            <button
-              type="button"
+            <a
+              href={anchors.demo}
               className={cn(
-                'inline-flex items-center gap-2 rounded-lg bg-[#00e5ff] px-6 py-3',
-                'text-sm font-semibold text-slate-950 transition-colors',
-                'hover:bg-[#33ebff] focus-visible:outline-none focus-visible:ring-2',
-                'focus-visible:ring-[#00e5ff] focus-visible:ring-offset-2 focus-visible:ring-offset-[#050a14]',
+                ctaLinkClass,
+                'bg-[#00e5ff] font-semibold text-slate-950 hover:bg-[#33ebff]',
+                'focus-visible:ring-[#00e5ff]',
               )}
             >
               Получить демо
               <span aria-hidden>→</span>
-            </button>
-            <button
-              type="button"
+            </a>
+            <a
+              href={anchors.demo}
               className={cn(
-                'inline-flex items-center gap-2 rounded-lg border border-slate-600/80',
-                'bg-transparent px-6 py-3 text-sm font-medium text-white',
-                'transition-colors hover:border-slate-500 hover:bg-white/5',
-                'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-500',
-                'focus-visible:ring-offset-2 focus-visible:ring-offset-[#050a14]',
+                ctaLinkClass,
+                'border border-slate-600/80 bg-transparent text-white',
+                'hover:border-slate-500 hover:bg-white/5 focus-visible:ring-slate-500',
               )}
             >
               <ChartIcon />
               Узнать больше
-            </button>
+            </a>
           </div>
         </FadeIn>
 
@@ -129,7 +132,13 @@ export function HeroSection() {
         </FadeIn>
 
         <FadeIn delay={720} className="mt-auto flex flex-1 flex-col justify-end pt-16">
-          <ScrollMouseIcon />
+          <a
+            href={anchors.problems}
+            className="flex justify-center transition-opacity hover:opacity-80"
+            aria-label="Прокрутить вниз"
+          >
+            <ScrollMouseIcon />
+          </a>
         </FadeIn>
       </div>
     </section>

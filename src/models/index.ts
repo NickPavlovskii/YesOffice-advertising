@@ -22,3 +22,32 @@ export type {
   ComparisonTableProps,
   WhyUsSectionInfo,
 } from './whyUs'
+export type {
+  CompetitorCell,
+  CompetitorCellVariant,
+  CompetitorComparisonData,
+  CompetitorComparisonRow,
+  CompetitorComparisonTableProps,
+  CompetitorRegion,
+  CompetitorsSectionInfo,
+  RegionToggleProps,
+} from './competitors'
+export type {
+  SocialLink,
+  SocialLinkType,
+  TeamCardProps,
+  TeamMember,
+  TeamSectionInfo,
+} from './team'
+export type {
+  DemoBenefit,
+  DemoContact,
+  DemoSectionInfo,
+  JoinCtaInfo,
+} from './cta'
+export type {
+  FooterContact,
+  FooterInfo,
+  FooterLink,
+  FooterLinkGroup,
+} from './footer'

@@ -51,10 +51,6 @@ export function WhyUsSection() {
         </AnimateIn>
       </div>
 
-      <div
-        className="absolute inset-x-0 bottom-0 h-px bg-[#00e5ff] shadow-[0_0_14px_rgba(0,229,255,0.65)]"
-        aria-hidden
-      />
     </section>
   )
 }
