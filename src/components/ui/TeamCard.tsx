@@ -1,4 +1,5 @@
 import type { SocialLink, TeamCardProps } from '@/models/team'
+import { ZoomableImage } from '@/components/ui/ZoomableImage'
 import { cn } from '@/utils/cn'
 
 function SocialIcon({ type }: { type: SocialLink['type'] }) {
@@ -43,10 +44,12 @@ export function TeamCard({
       )}
     >
       <div className="p-4 pb-0">
-        <img
+        <ZoomableImage
           src={photo}
           alt={name}
-          className="aspect-square w-full rounded-xl object-cover object-top"
+          className="overflow-hidden rounded-xl"
+          imgClassName="aspect-square w-full object-cover object-top"
+          hint="Открыть фото"
         />
       </div>
 

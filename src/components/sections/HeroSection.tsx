@@ -1,6 +1,8 @@
 import type { PropsWithChildren } from 'react'
 import { Logo, ScrollMouseIcon } from '@/components/ui'
+import { ZoomableImage } from '@/components/ui/ZoomableImage'
 import { anchors } from '@/constants/anchors'
+import { images } from '@/constants/images'
 import { heroStats } from '@/constants/hero'
 import { cn } from '@/utils/cn'
 
@@ -104,6 +106,21 @@ export function HeroSection() {
               <ChartIcon />
               Узнать больше
             </a>
+          </div>
+        </FadeIn>
+
+        <FadeIn delay={420}>
+          <div className="relative mt-12 w-full max-w-4xl">
+            <div
+              className="pointer-events-none absolute -inset-4 rounded-3xl bg-[#00e5ff]/10 blur-2xl"
+              aria-hidden
+            />
+            <ZoomableImage
+              src={images.platform.plan}
+              alt="Интерфейс платформы YesOffice — интерактивный план этажа"
+              className="relative overflow-hidden rounded-2xl border border-white/10 bg-slate-900/60 p-1 shadow-2xl shadow-black/40 ring-1 ring-white/10 sm:p-2"
+              imgClassName="mx-auto block h-auto w-full max-w-full object-contain"
+            />
           </div>
         </FadeIn>
 

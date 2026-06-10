@@ -32,6 +32,9 @@ export function PlatformFeatureBlock({
   items,
   imageSrc,
   imageAlt,
+  imageFit,
+  imageAspect,
+  imageFrameClass,
   reversed = false,
 }: PlatformFeatureBlockProps) {
   return (
@@ -56,7 +59,13 @@ export function PlatformFeatureBlock({
       </div>
 
       <div className={cn(reversed ? 'lg:order-1' : 'lg:order-2')}>
-        <ImagePlaceholder src={imageSrc} alt={imageAlt} />
+        <ImagePlaceholder
+          src={imageSrc}
+          alt={imageAlt}
+          fit={imageFit}
+          aspect={imageAspect}
+          frameClassName={imageFrameClass}
+        />
       </div>
     </article>
   )

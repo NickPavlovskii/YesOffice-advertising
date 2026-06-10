@@ -1,4 +1,4 @@
-export type PlatformFeatureIcon = 'grid' | 'layers'
+export type PlatformFeatureIcon = 'grid' | 'layers' | 'chart' | 'edit'
 
 export type PlatformFeatureItem = {
   id: string
@@ -9,6 +9,9 @@ export type PlatformFeatureItem = {
   items: string[]
   imageSrc?: string
   imageAlt: string
+  imageFit?: 'cover' | 'contain'
+  imageAspect?: `${number}/${number}`
+  imageFrameClass?: string
   reversed?: boolean
 }
 
@@ -25,4 +28,7 @@ export type ImagePlaceholderProps = {
   src?: string
   alt: string
   className?: string
+  fit?: 'cover' | 'contain'
+  aspect?: `${number}/${number}`
+  frameClassName?: string
 }

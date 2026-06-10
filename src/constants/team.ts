@@ -1,3 +1,4 @@
+import { images } from '@/constants/images'
 import type { TeamMember, TeamSectionInfo } from '@/models/team'
 
 export const teamSection: TeamSectionInfo = {
@@ -12,7 +13,7 @@ export const teamMembers: TeamMember[] = [
     id: 'nikita',
     name: 'Никита Слесарев',
     role: 'CEO & PM & Analyst',
-    photo: '/images/team/member-2.png',
+    photo: images.team.member2,
     bio: 'Определяет продуктовую стратегию и аналитику платформы, превращая потребности управляющих компаний в цифровые решения.',
     socials: [
       { type: 'linkedin', href: '#' },
@@ -23,7 +24,7 @@ export const teamMembers: TeamMember[] = [
     id: 'alexey',
     name: 'Александр Робеко',
     role: 'CTO & Backend Developer',
-    photo: '/images/team/member-1.png',
+    photo: images.team.member1,
     bio: 'Проектирует архитектуру и backend платформы, обеспечивая надёжность, интеграции и масштабируемость системы.',
     socials: [
       { type: 'linkedin', href: '#' },
@@ -34,7 +35,7 @@ export const teamMembers: TeamMember[] = [
     id: 'maxim',
     name: 'Никита Павловский',
     role: 'UI/UX & Frontend Developer',
-    photo: '/images/team/member-3.png',
+    photo: images.team.member3,
     bio: 'Проектирует интерфейсы и реализует frontend-часть платформы, делая сложную аналитику понятной для пользователей.',
     socials: [
       { type: 'linkedin', href: '#' },

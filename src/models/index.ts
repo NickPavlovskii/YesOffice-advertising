@@ -51,3 +51,4 @@ export type {
   FooterLink,
   FooterLinkGroup,
 } from './footer'
+export type { ImageLightboxProps } from './imageLightbox'

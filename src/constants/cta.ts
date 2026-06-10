@@ -21,8 +21,8 @@ export const demoSection: DemoSectionInfo = {
     { text: 'Помощь с импортом данных из Excel' },
   ],
   contacts: [
-    { type: 'email', value: 'info@YesOffice.ru', href: 'mailto:info@YesOffice.ru' },
-    { type: 'phone', value: '8 800 123-45-67', href: 'tel:+78001234567' },
+    { type: 'email', value: 'o_oniklado_o@list.ru', href: 'mailto:o_oniklado_o@list.ru' },
+    { type: 'phone', value: '8 988 362-07-22', href: 'tel:+79883620722' },
   ],
   formTitle: 'Запросить демонстрацию',
   submitText: 'Получить демо',

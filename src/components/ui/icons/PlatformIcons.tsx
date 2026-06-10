@@ -54,9 +54,45 @@ function ChartBadgeIcon() {
   )
 }
 
+function ChartIcon() {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+      <path d="M4 18V6M4 18h16" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+      <path
+        d="M8 14l3-4 3 2 4-5"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  )
+}
+
+function EditIcon() {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+      <path
+        d="M4 20h4l10.5-10.5a2.1 2.1 0 0 0-3-3L5 17v3z"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M13.5 6.5l3 3"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+      />
+    </svg>
+  )
+}
+
 const iconMap: Record<PlatformFeatureIcon, () => ReactNode> = {
   grid: GridIcon,
   layers: LayersIcon,
+  chart: ChartIcon,
+  edit: EditIcon,
 }
 
 export function PlatformFeatureIcon({ name }: { name: PlatformFeatureIcon }) {
