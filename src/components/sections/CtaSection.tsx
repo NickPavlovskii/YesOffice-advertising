@@ -87,6 +87,8 @@ export function CtaSection() {
               formTitle={demoSection.formTitle}
               submitText={demoSection.submitText}
               privacyText={demoSection.privacyText}
+              successTitle={demoSection.successTitle}
+              successMessage={demoSection.successMessage}
             />
           </AnimateIn>
         </div>

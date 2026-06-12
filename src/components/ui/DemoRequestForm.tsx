@@ -6,7 +6,7 @@ import { cn } from '@/utils/cn'
 
 type DemoRequestFormProps = Pick<
   DemoSectionInfo,
-  'formTitle' | 'submitText' | 'privacyText'
+  'formTitle' | 'submitText' | 'privacyText' | 'successTitle' | 'successMessage'
 > & {
   className?: string
 }
@@ -56,10 +56,21 @@ const inputClass = cn(
   'disabled:cursor-not-allowed disabled:opacity-60',
 )
 
+function SuccessIcon() {
+  return (
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden className="text-[#4ade80]">
+      <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="1.5" />
+      <path d="M8 12.5l2.5 2.5L16 9.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  )
+}
+
 export function DemoRequestForm({
   formTitle,
   submitText,
   privacyText,
+  successTitle,
+  successMessage,
   className,
 }: DemoRequestFormProps) {
   const [form, setForm] = useState<DemoFormData>(initialForm)
@@ -100,9 +111,19 @@ export function DemoRequestForm({
       <h3 className="text-xl font-bold text-white">{formTitle}</h3>
 
       {status === 'success' ? (
-        <p className="mt-6 rounded-lg border border-[#4ade80]/30 bg-[#4ade80]/10 px-4 py-3 text-sm text-[#4ade80]">
-          Заявка отправлена! Проверьте почту — мы прислали подтверждение.
-        </p>
+        <div
+          className="mt-6 rounded-lg border border-[#4ade80]/30 bg-[#4ade80]/10 px-5 py-5"
+          role="status"
+          aria-live="polite"
+        >
+          <div className="flex items-start gap-4">
+            <SuccessIcon />
+            <div>
+              <p className="text-base font-semibold text-[#4ade80]">{successTitle}</p>
+              <p className="mt-2 text-sm leading-relaxed text-slate-300">{successMessage}</p>
+            </div>
+          </div>
+        </div>
       ) : (
         <form className="mt-6 space-y-4" onSubmit={handleSubmit}>
           <label className="block">

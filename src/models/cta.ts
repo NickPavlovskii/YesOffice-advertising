@@ -24,4 +24,6 @@ export type DemoSectionInfo = {
   formTitle: string
   privacyText: string
   submitText: string
+  successTitle: string
+  successMessage: string
 }
